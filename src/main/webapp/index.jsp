@@ -802,6 +802,7 @@
                             <a href="#"><i class="fas fa-watch"></i> Accessories</a>
                         </div>
                     </li>
+                    <li><a href="#"><i class="fas fa-fire"></i> This are the</a></li>
                     <li><a href="#"><i class="fas fa-fire"></i> Trending</a></li>
                     <li><a href="#"><i class="fas fa-percent"></i> Deals</a></li>
                     <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
@@ -826,7 +827,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Praneeth Shop Collection 2025</h1>
+            <h1>Trendsetter Shop Collection 2025</h1>
             <p>Discover the latest trends in fashion, technology and accessories with up to 50% off selected items</p>
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary">Shop Now</a>
