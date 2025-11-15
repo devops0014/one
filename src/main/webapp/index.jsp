@@ -802,7 +802,6 @@
                             <a href="#"><i class="fas fa-watch"></i> Accessories</a>
                         </div>
                     </li>
-                    <li><a href="#"><i class="fas fa-fire"></i> This are the</a></li>
                     <li><a href="#"><i class="fas fa-fire"></i> Trending</a></li>
                     <li><a href="#"><i class="fas fa-percent"></i> Deals</a></li>
                     <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
