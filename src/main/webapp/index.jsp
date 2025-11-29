@@ -792,33 +792,33 @@
                 <ul>
                     <li><a href="#"><em class="fas fa-home"></em> Home</a></li>
                     <li class="dropdown">
-                        <a href="#"><i class="fas fa-th-large"></i> Categories <i class="fas fa-chevron-down"></i></a>
+                        <a href="#"><em class="fas fa-th-large"></em> Categories <em class="fas fa-chevron-down"></em></a>
                         <div class="dropdown-content">
-                            <a href="#"><i class="fas fa-mobile-alt"></i> Smartphones</a>
-                            <a href="#"><i class="fas fa-laptop"></i> Laptops</a>
-                            <a href="#"><i class="fas fa-tshirt"></i> Clothing</a>
-                            <a href="#"><i class="fas fa-headphones"></i> Gadgets</a>
-                            <a href="#"><i class="fas fa-shoe-prints"></i> Footwear</a>
-                            <a href="#"><i class="fas fa-watch"></i> Accessories</a>
+                            <a href="#"><em class="fas fa-mobile-alt"></em> Smartphones</a>
+                            <a href="#"><em class="fas fa-laptop"></em> Laptops</a>
+                            <a href="#"><em class="fas fa-tshirt"></em> Clothing</a>
+                            <a href="#"><em class="fas fa-headphones"></em> Gadgets</a>
+                            <a href="#"><em class="fas fa-shoe-prints"></em> Footwear</a>
+                            <a href="#"><em class="fas fa-watch"></em> Accessories</a>
                         </div>
                     </li>
-                    <li><a href="#"><i class="fas fa-fire"></i> Trending</a></li>
-                    <li><a href="#"><i class="fas fa-percent"></i> Deals</a></li>
-                    <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="#"><em class="fas fa-fire"></em> Trending</a></li>
+                    <li><a href="#"><em class="fas fa-percent"></em> Deals</a></li>
+                    <li><a href="#"><em class="fas fa-info-circle"></em> About</a></li>
+                    <li><a href="#"><em class="fas fa-envelope"></em> Contact</a></li>
                 </ul>
             </nav>
             
             <div class="search-bar">
-                <input type="text" placeholder="Search products...">
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <emnput type="text" placeholder="Search products...">
+                <button type="submit"><em class="fas fa-search"></em></button>
             </div>
             
             <div class="header-icons">
-                <a href="#"><i class="far fa-user"></i></a>
-                <a href="#"><i class="far fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">3</span></a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                <a href="#"><em class="far fa-user"></em></a>
+                <a href="#"><em class="far fa-heart"></em></a>
+                <a href="#"><em class="fas fa-shopping-cart"></em><span class="cart-count">3</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><em class="fas fa-bars"></em></button>
             </div>
         </div>
     </header>
@@ -844,32 +844,32 @@
         
         <div class="categories">
             <div class="category-card">
-                <div class="category-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="category-icon"><em class="fas fa-mobile-alt"></em></div>
                 <h3>Smartphones</h3>
                 <p>Latest models from top brands</p>
             </div>
             <div class="category-card">
-                <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                <div class="category-icon"><em class="fas fa-laptop"></em></div>
                 <h3>Laptops</h3>
                 <p>Powerful machines for work & play</p>
             </div>
             <div class="category-card">
-                <div class="category-icon"><i class="fas fa-tshirt"></i></div>
+                <div class="category-icon"><em class="fas fa-tshirt"></em></div>
                 <h3>Clothing</h3>
                 <p>Trendy outfits for every occasion</p>
             </div>
             <div class="category-card">
-                <div class="category-icon"><i class="fas fa-headphones"></i></div>
+                <div class="category-icon"><em class="fas fa-headphones"></em></div>
                 <h3>Gadgets</h3>
                 <p>Smart devices for modern life</p>
             </div>
             <div class="category-card">
-                <div class="category-icon"><i class="fas fa-shoe-prints"></i></div>
+                <div class="category-icon"><em class="fas fa-shoe-prints"></em></div>
                 <h3>Footwear</h3>
                 <p>Comfortable & stylish shoes</p>
             </div>
             <div class="category-card">
-                <div class="category-icon"><i class="fas fa-watch"></i></div>
+                <div class="category-icon"><em class="fas fa-watch"></em></div>
                 <h3>Accessories</h3>
                 <p>Complete your look</p>
             </div>
@@ -886,7 +886,7 @@
         <div class="products">
             <div class="product-card">
                 <span class="product-badge">New</span>
-                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Smartphone" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Smartphone" class="product-img">
                 <div class="product-info">
                     <h3>iPhone 14 Pro Max</h3>
                     <div class="price">$1299 <span class="old-price">$1,199</span></div>
@@ -895,7 +895,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Laptop" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Laptop" class="product-img">
                 <div class="product-info">
                     <h3>MacBook Pro 14"</h3>
                     <div class="price">$1,999</div>
@@ -905,7 +905,7 @@
             </div>
             <div class="product-card">
                 <span class="product-badge">-25%</span>
-                <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Smartwatch" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Smartwatch" class="product-img">
                 <div class="product-info">
                     <h3>Apple Watch Series 8</h3>
                     <div class="price">$349 <span class="old-price">$399</span></div>
@@ -914,7 +914,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Sneakers" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Sneakers" class="product-img">
                 <div class="product-info">
                     <h3>Nike Air Max 270</h3>
                     <div class="price">$250</div>
@@ -923,7 +923,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Camera" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Camera" class="product-img">
                 <div class="product-info">
                     <h3>Sony A7 IV Camera</h3>
                     <div class="price">$2,499</div>
@@ -933,7 +933,7 @@
             </div>
             <div class="product-card">
                 <span class="product-badge">Bestseller</span>
-                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Perfume" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Perfume" class="product-img">
                 <div class="product-info">
                     <h3>Chanel No. 5</h3>
                     <div class="price">$120</div>
@@ -942,7 +942,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Backpack" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Backpack" class="product-img">
                 <div class="product-info">
                     <h3>Travel Backpack</h3>
                     <div class="price">$79 <span class="old-price">$99</span></div>
@@ -951,7 +951,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Headphones" class="product-img">
+                <emmg src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Headphones" class="product-img">
                 <div class="product-info">
                     <h3>Sony WH-1000XM5</h3>
                     <div class="price">$399</div>
@@ -971,7 +971,7 @@
             </div>
             
             <div class="deal-container">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="MacBook Deal" class="deal-img">
+                <emmg src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="MacBook Deal" class="deal-img">
                 <div class="deal-content">
                     <h3>MacBook Air M2</h3>
                     <p>The incredibly thin and light MacBook Air with the powerful M2 chip.</p>
@@ -1013,7 +1013,7 @@
                 <div class="rating">★★★★★</div>
                 <p>"I've never had such a smooth shopping experience. The products are top quality and exactly as described. Delivery was super fast too!"</p>
                 <div class="user-info">
-                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="user-avatar">
+                    <emmg src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="user-avatar">
                     <div>
                         <div class="user-name">Sarah J.</div>
                         <div class="user-title">Verified Buyer</div>
@@ -1024,7 +1024,7 @@
                 <div class="rating">★★★★☆</div>
                 <p>"Great selection of products at competitive prices. Customer service was helpful when I had a question about my order."</p>
                 <div class="user-info">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="user-avatar">
+                    <emmg src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="user-avatar">
                     <div>
                         <div class="user-name">Michael T.</div>
                         <div class="user-title">Verified Buyer</div>
@@ -1035,7 +1035,7 @@
                 <div class="rating">★★★★★</div>
                 <p>"The flash deals are amazing! I got a brand new laptop for 25% off. Will definitely be shopping here again."</p>
                 <div class="user-info">
-                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma L." class="user-avatar">
+                    <emmg src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma L." class="user-avatar">
                     <div>
                         <div class="user-name">Emma L.</div>
                         <div class="user-title">Verified Buyer</div>
@@ -1046,7 +1046,7 @@
                 <div class="rating">★★★★★</div>
                 <p>"Fast shipping and excellent packaging. The product exceeded my expectations. Highly recommend this store!"</p>
                 <div class="user-info">
-                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David K." class="user-avatar">
+                    <emmg src="https://randomuser.me/api/portraits/men/75.jpg" alt="David K." class="user-avatar">
                     <div>
                         <div class="user-name">David K.</div>
                         <div class="user-title">Verified Buyer</div>
@@ -1062,7 +1062,7 @@
             <h2>Stay Updated</h2>
             <p>Subscribe to our newsletter and get 10% off your first order plus exclusive access to sales and new arrivals.</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
+                <emnput type="email" placeholder="Enter your email address" required>
                 <button type="submit">Subscribe</button>
             </form>
         </div>
@@ -1076,10 +1076,10 @@
                     <h3>NexusShop</h3>
                     <p>Your one-stop destination for all the latest products in technology, fashion, and lifestyle.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><em class="fab fa-facebook-f"></em></a>
+                        <a href="#"><em class="fab fa-twitter"></em></a>
+                        <a href="#"><em class="fab fa-instagram"></em></a>
+                        <a href="#"><em class="fab fa-youtube"></em></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -1112,10 +1112,10 @@
                         <li><a href="#">Blog</a></li>
                     </ul>
                     <div class="payment-methods">
-                        <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
-                        <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard">
-                        <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="American Express">
-                        <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal">
+                        <emmg src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+                        <emmg src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard">
+                        <emmg src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="American Express">
+                        <emmg src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal">
                     </div>
                 </div>
             </div>
