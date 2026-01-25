@@ -1,58 +1,906 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>in.javahome</groupId>
-	<artifactId>myweb</artifactId>
-	<packaging>war</packaging>
-	<version>8.7.3</version>
-	<name>Java Home myweb</name>
-	<url>http://maven.apache.org</url>
-	
-	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://18.181.164.81:9000/</sonar.host.url>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji Mart - Online Shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-	</properties>
-	<dependencies>
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+        }
 
-		
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-	</dependencies>
-	
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>nexusRepo</id>
-		    <url>http://34.208.218.12:8081/repository/sample-snapshots/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>nexusRepo</id>
-		    <url>http://44.210.238.199:8081/repository/myrepo/</url>
-		</repository>
-  	</distributionManagement>
-	
-	<pluginRepositories>
-	    <pluginRepository>    
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven2</url>
-	    </pluginRepository>
-	</pluginRepositories>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.4.0</version> <!-- or latest stable -->
-			</plugin>
-		</plugins>
-	</build>
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
 
-	
-</project>
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: 3px solid white;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #f1c40f;
+        }
+
+        .logo-text span {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f1c40f;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 22px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #f1c40f;
+            color: #2c3e50;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Products Section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: #f1c40f;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .product-desc {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 22px;
+            font-weight: 800;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 12px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1a252f;
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 380px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: right 0.4s ease;
+            z-index: 1001;
+            overflow-y: auto;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .cart-title {
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        .close-cart {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+
+        .cart-items {
+            margin-bottom: 25px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .cart-item-price {
+            color: #e74c3c;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #f5f7fa;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cart-item-quantity {
+            font-weight: 600;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .remove-item {
+            color: #e74c3c;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: auto;
+        }
+
+        .cart-total {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background-color: #219653;
+        }
+
+        .empty-cart {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 40px 0;
+        }
+
+        .empty-cart i {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #f1c40f;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            color: #bdc3c7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #f1c40f;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-img">BM</div>
+                <div class="logo-text">BALAJI <span>MART</span></div>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Balaji Mart</h1>
+        <p>Your one-stop shop for fresh groceries, household essentials, and daily needs. Quality products at affordable prices with convenient home delivery.</p>
+        <button class="cta-button" id="shopNow">Shop Now</button>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container" id="products">
+        <h2 class="section-title">Our Products</h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="groceries">Groceries</button>
+            <button class="filter-btn" data-filter="dairy">Dairy</button>
+            <button class="filter-btn" data-filter="snacks">Snacks</button>
+            <button class="filter-btn" data-filter="beverages">Beverages</button>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">₹0.00</span>
+        </div>
+        
+        <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Balaji Mart</h3>
+                <p>Balaji Mart is a trusted neighborhood store providing quality products since 2010. We are committed to offering fresh groceries and household items at reasonable prices.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Market Street, City, State 12345</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@balajimart.com</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Balaji Mart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sample product data
+        const products = [
+            {
+                id: 1,
+                name: "Fresh Tomatoes",
+                category: "groceries",
+                price: 45,
+                image: "https://images.unsplash.com/photo-1549737328-8b9f3252b927?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Fresh organic tomatoes, perfect for salads and cooking"
+            },
+            {
+                id: 2,
+                name: "Milk 1L",
+                category: "dairy",
+                price: 60,
+                image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Fresh cow milk, pasteurized and homogenized"
+            },
+            {
+                id: 3,
+                name: "Potato Chips",
+                category: "snacks",
+                price: 30,
+                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Crunchy potato chips with classic salted flavor"
+            },
+            {
+                id: 4,
+                name: "Orange Juice",
+                category: "beverages",
+                price: 120,
+                image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "100% pure orange juice without added sugar"
+            },
+            {
+                id: 5,
+                name: "Basmati Rice",
+                category: "groceries",
+                price: 150,
+                image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Premium quality basmati rice, 5kg pack"
+            },
+            {
+                id: 6,
+                name: "Cheese Slices",
+                category: "dairy",
+                price: 180,
+                image: "https://images.unsplash.com/photo-1552767059-ce182ead6c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Processed cheese slices, 10 slices pack"
+            },
+            {
+                id: 7,
+                name: "Biscuits Pack",
+                category: "snacks",
+                price: 50,
+                image: "https://images.unsplash.com/photo-1581235854267-4d6dd6d6f8d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Assorted cream biscuits, 300g pack"
+            },
+            {
+                id: 8,
+                name: "Green Tea",
+                category: "beverages",
+                price: 200,
+                image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                description: "Premium green tea with antioxidants, 25 tea bags"
+            }
+        ];
+
+        // Cart data
+        let cart = JSON.parse(localStorage.getItem('balajiMartCart')) || [];
+        
+        // DOM Elements
+        const productsGrid = document.getElementById('productsGrid');
+        const cartIcon = document.getElementById('cartIcon');
+        const cartCount = document.getElementById('cartCount');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const closeCart = document.getElementById('closeCart');
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const shopNowBtn = document.getElementById('shopNow');
+        
+        // Initialize the application
+        function initApp() {
+            renderProducts();
+            updateCartUI();
+            
+            // Event Listeners
+            cartIcon.addEventListener('click', () => {
+                cartSidebar.classList.add('active');
+                renderCartItems();
+            });
+            
+            closeCart.addEventListener('click', () => {
+                cartSidebar.classList.remove('active');
+            });
+            
+            checkoutBtn.addEventListener('click', () => {
+                if (cart.length === 0) {
+                    alert('Your cart is empty. Add some products first!');
+                    return;
+                }
+                alert(`Thank you for your order! Total: ₹${calculateCartTotal().toFixed(2)}\nYour order will be delivered soon.`);
+                cart = [];
+                saveCartToStorage();
+                updateCartUI();
+                renderCartItems();
+                cartSidebar.classList.remove('active');
+            });
+            
+            shopNowBtn.addEventListener('click', () => {
+                document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Filter buttons event listeners
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    renderProducts(filter);
+                });
+            });
+        }
+        
+        // Render products to the page
+        function renderProducts(filter = 'all') {
+            productsGrid.innerHTML = '';
+            
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(product => product.category === filter);
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-desc">${product.description}</p>
+                        <div class="product-price">₹${product.price.toFixed(2)}</div>
+                        <button class="add-to-cart" data-id="${product.id}">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                `;
+                
+                productsGrid.appendChild(productCard);
+            });
+            
+            // Add event listeners to all "Add to Cart" buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
+                    addToCart(productId);
+                });
+            });
+        }
+        
+        // Add product to cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            
+            // Check if product is already in cart
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+            
+            saveCartToStorage();
+            updateCartUI();
+            
+            // Show feedback
+            const button = document.querySelector(`.add-to-cart[data-id="${productId}"]`);
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Added!';
+            button.style.backgroundColor = '#27ae60';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.backgroundColor = '';
+            }, 1000);
+        }
+        
+        // Render cart items in sidebar
+        function renderCartItems() {
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some products to your cart</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            cartItems.innerHTML = '';
+            
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-name">${item.name}</h4>
+                        <div class="cart-item-price">₹${item.price.toFixed(2)}</div>
+                        <div class="cart-item-actions">
+                            <button class="quantity-btn decrease-quantity" data-id="${item.id}">-</button>
+                            <span class="cart-item-quantity">${item.quantity}</span>
+                            <button class="quantity-btn increase-quantity" data-id="${item.id}">+</button>
+                            <button class="remove-item" data-id="${item.id}">Remove</button>
+                        </div>
+                    </div>
+                `;
+                
+                cartItems.appendChild(cartItem);
+            });
+            
+            // Add event listeners for quantity buttons and remove buttons
+            document.querySelectorAll('.decrease-quantity').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
+                    updateQuantity(productId, -1);
+                });
+            });
+            
+            document.querySelectorAll('.increase-quantity').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
+                    updateQuantity(productId, 1);
+                });
+            });
+            
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
+                    removeFromCart(productId);
+                });
+            });
+            
+            // Update total
+            cartTotal.textContent = `₹${calculateCartTotal().toFixed(2)}`;
+        }
+        
+        // Update quantity of a cart item
+        function updateQuantity(productId, change) {
+            const item = cart.find(item => item.id === productId);
+            
+            if (item) {
+                item.quantity += change;
+                
+                if (item.quantity <= 0) {
+                    cart = cart.filter(item => item.id !== productId);
+                }
+                
+                saveCartToStorage();
+                updateCartUI();
+                renderCartItems();
+            }
+        }
+        
+        // Remove item from cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            saveCartToStorage();
+            updateCartUI();
+            renderCartItems();
+        }
+        
+        // Calculate total cart value
+        function calculateCartTotal() {
+            return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        }
+        
+        // Update cart UI (count and total)
+        function updateCartUI() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+        
+        // Save cart to localStorage
+        function saveCartToStorage() {
+            localStorage.setItem('balajiMartCart', JSON.stringify(cart));
+        }
+        
+        // Initialize the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
