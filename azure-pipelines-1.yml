@@ -1,0 +1,16 @@
+trigger:
+- gcp
+
+variables:
+  var1: "Raham"
+  var2: "Shaik"
+
+pool:
+  name: myone
+
+steps:
+  - script: echo "Hey $(var1) $(var2)"
+    displayName: "Stage-1"
+
+  - script: echo "Welcome $(var1)"
+    displayName: "stage-2"

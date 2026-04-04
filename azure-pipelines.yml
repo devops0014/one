@@ -1,0 +1,26 @@
+trigger:
+- master
+
+pool:
+  name: flm-pool
+
+steps:
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
+- task: TomcatDeployment@1
+  inputs:
+    TomcatUrl: 'http://48.217.68.254:8080/'
+    Username: 'tomcat'
+    Password: 'admin@123'
+    Warfile: 'target/myweb-8.7.3.war'
+    Context: '/our-app'
+    ServerVersion: '7OrAbove'
