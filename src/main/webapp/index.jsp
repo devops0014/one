@@ -571,6 +571,7 @@
         <section class="hero" role="img" aria-label="Hero banner">
             <div class="container">
                 <h1>ANOOP'sss Collection — Premium Picks</h1>
+
                 <p>Discover the latest trends in fashion, technology and accessories — curated just for you. Enjoy limited-time deals and free shipping on selected items.</p>
                 <div>
                     <button class="btn btn-primary" id="shopNow">Shop Now <em class="fas fa-arrow-right"></em></button>
