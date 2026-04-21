@@ -570,7 +570,7 @@
         <!-- Hero -->
         <section class="hero" role="img" aria-label="Hero banner">
             <div class="container">
-                <h1>MY NEWEST TRENDY COLLECTIONS DONE — Premium Picks</h1>
+                <h1>MY NEWEST TRENDY COLLECTIONS TEST — Premium Picks</h1>
 
                 <p>Discover the latest trends in fashion, technology and accessories — curated just for you. Enjoy limited-time deals and free shipping on selected items.</p>
                 <div>
