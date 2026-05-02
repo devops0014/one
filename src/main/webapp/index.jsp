@@ -206,7 +206,7 @@
         .hero p {
             margin: 0 0 22px;
             opacity: 0.95;
-            max-width: 820px;
+            // max-width: 820px;
         }
 
         .btn {
