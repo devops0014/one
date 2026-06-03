@@ -39,7 +39,9 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	 <plugin>
+	<build>
+    <plugins>
+        <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
             <version>3.4.0</version>
@@ -47,4 +49,6 @@
                 <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
+    </plugins>
+</build>
 </project>
