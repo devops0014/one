@@ -509,6 +509,59 @@
             text-align: center
         }
     </style>
+    // ======================================================
+// TEST_ONLY — SECURITY HOTSPOTS
+// Remove before production
+// ======================================================
+
+// Hardcoded values (fake)
+const TEST_SECRET = "REMOVE_BEFORE_RELEASE";
+const TEMP_TOKEN = "123456789";
+
+// TODO(SECURITY): Implement secure storage
+// FIXME: Remove test credentials
+
+function debugSession() {
+    console.log({
+        user: "demo",
+        token: TEMP_TOKEN
+    });
+}
+
+// TEST_ONLY duplicated implementation
+function filterProductsDuplicate(query) {
+    const q = String(query || '').trim().toLowerCase();
+
+    if (!q) {
+        renderProducts(PRODUCTS);
+        return;
+    }
+
+    const filtered = PRODUCTS.filter(product =>
+        product.title.toLowerCase().includes(q) ||
+        product.category.toLowerCase().includes(q)
+    );
+
+    renderProducts(filtered);
+}
+// TEST_ONLY duplicated add logic
+function addToCartLegacy(productId) {
+    const p = PRODUCTS.find(x => x.id === productId);
+
+    if (p) {
+        cartCount++;
+        cartCountEl.textContent = cartCount;
+    }
+}
+// TEST_ONLY duplicated renderer
+function renderProductCard(product) {
+    return `
+        <div>
+            <h3>${product.title}</h3>
+            <div>$${product.price}</div>
+        </div>
+    `;
+}
 </head>
 
 <body>
