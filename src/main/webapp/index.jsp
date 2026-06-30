@@ -135,10 +135,12 @@
 
         .icon-btn {
             background: transparent;
+            color: var(--primary);
             border: 0;
             cursor: pointer;
             color: var(--primary);
             font-size: 16px;
+            color: var(--primary);
         }
 
         .header-actions {
