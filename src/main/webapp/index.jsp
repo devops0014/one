@@ -721,40 +721,71 @@
     </footer>
 
     <script>
-        // --- Sample data (can be replaced by server-side data or API) ---
         // ======================================================
-// TEST_ONLY — SECURITY HOTSPOTS
+// TEST_ONLY — QUALITY GATE TRIGGERS
 // Remove before production
 // ======================================================
 
-const TEST_SECRET = "REMOVE_BEFORE_RELEASE";
-const TEMP_TOKEN = "123456789";
+// TODO: Replace temporary implementation
+// FIXME: Refactor duplicate logic
+// SECURITY: Review secret handling
 
-// TODO(SECURITY): Implement secure storage
-// FIXME: Remove test credentials
+const TEST_SECRET_1 = "REMOVE_ME";
+const TEST_SECRET_2 = "REMOVE_ME";
 
-function debugSession() {
-    console.log({
-        user: "demo",
-        token: TEMP_TOKEN
-    });
+// duplicated blocks
+function duplicateLogicA(items) {
+    let total = 0;
+
+    for (let i = 0; i < items.length; i++) {
+        total += i;
+    }
+
+    return total;
 }
 
-function filterProductsDuplicate(query) {
-    return query;
+function duplicateLogicB(items) {
+    let total = 0;
+
+    for (let i = 0; i < items.length; i++) {
+        total += i;
+    }
+
+    return total;
 }
 
-function addToCartLegacy(productId) {
-    return productId;
+// dead code
+function neverUsedFunction() {
+    return "unused";
 }
 
-function renderProductCard(product) {
-    return `
-        <div>
-            <h3>${product.title}</h3>
-        </div>
-    `;
+// nested complexity
+function complexCheck(a, b, c) {
+    if (a) {
+        if (b) {
+            if (c) {
+                if (a && b && c) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
 }
+
+// debug logging
+console.log("TEST ONLY");
+
+// duplicated utility
+function tempSearch(value) {
+    return value.toLowerCase();
+}
+
+function tempSearch2(value) {
+    return value.toLowerCase();
+}
+        // --- Sample data (can be replaced by server-side data or API) ---
         const CATEGORIES = [{
                 id: 'phones',
                 name: 'Smartphones',
