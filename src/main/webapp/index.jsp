@@ -721,70 +721,7 @@
     </footer>
 
     <script>
-        // ======================================================
-// TEST_ONLY — QUALITY GATE TRIGGERS
-// Remove before production
-// ======================================================
-
-// TODO: Replace temporary implementation
-// FIXME: Refactor duplicate logic
-// SECURITY: Review secret handling
-
-const TEST_SECRET_1 = "REMOVE_ME";
-const TEST_SECRET_2 = "REMOVE_ME";
-
-// duplicated blocks
-function duplicateLogicA(items) {
-    let total = 0;
-
-    for (let i = 0; i < items.length; i++) {
-        total += i;
-    }
-
-    return total;
-}
-
-function duplicateLogicB(items) {
-    let total = 0;
-
-    for (let i = 0; i < items.length; i++) {
-        total += i;
-    }
-
-    return total;
-}
-
-// dead code
-function neverUsedFunction() {
-    return "unused";
-}
-
-// nested complexity
-function complexCheck(a, b, c) {
-    if (a) {
-        if (b) {
-            if (c) {
-                if (a && b && c) {
-                    return true;
-                }
-            }
-        }
-    }
-
-    return false;
-}
-
-// debug logging
-console.log("TEST ONLY");
-
-// duplicated utility
-function tempSearch(value) {
-    return value.toLowerCase();
-}
-
-function tempSearch2(value) {
-    return value.toLowerCase();
-}
+    
         // --- Sample data (can be replaced by server-side data or API) ---
         const CATEGORIES = [{
                 id: 'phones',
