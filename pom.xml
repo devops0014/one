@@ -39,7 +39,7 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>nexusRepo</id>
-		    <url>http://34.208.218.12:8081/repository/sample-snapshots/</url>
+		    <url>http://54.85.42.96:8081/repository/JavaApplic/</url>
 		 </snapshotRepository>
 		
 		<repository>
