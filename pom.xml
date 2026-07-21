@@ -43,14 +43,8 @@
 		 </snapshotRepository>
 		
 		<repository>
-  <id>mydevops-feed</id>
-  <url>https://pkgs.dev.azure.com/shaikmustafa8991/myproject/_packaging/mydevops-feed/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
+			<id>nexusRepo</id>
+			<url>http://54.85.42.96:8081/repository/JavaApplic/</url>
 </repository>
   	</distributionManagement>
 	
