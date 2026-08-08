@@ -1,0 +1,6 @@
+---
+services:
+  ecommerce:
+    image: varshithadevops/myrepo:myimage
+    ports:
+      - "8989:8080"
