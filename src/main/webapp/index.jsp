@@ -1185,6 +1185,11 @@
         <!-- HERO -->
         <section class="hero" aria-label="Hero banner">
             <div class="container">
+                <h1>New SG collection  Premium Picks</h1>
+                <p>Discover the latest trends in fashion, technology and accessories — curated just for you. Enjoy limited-time deals and free shipping on selected items.</p>
+                <div>
+                    <button class="btn btn-primary" id="shopNow">Shop Now <em class="fas fa-arrow-right"></em></button>
+                    <button class="btn btn-ghost" id="exploreDeals">Explore Deals</button>
                 <div class="badge"><i class="fas fa-sparkles"></i> New Collection 2026</div>
                 <h1>Discover Premium <br>Essentials</h1>
                 <p>Curated fashion, tech & accessories with free shipping on your first order. Limited-time deals await.</p>
