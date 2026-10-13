@@ -9,7 +9,7 @@
 
     <groupId>in.javahome</groupId>
     <artifactId>myweb</artifactId>
-    <version>8.8.4</version>
+    <version>8.8.5</version>
     <packaging>war</packaging>
 
     <name>Java Home myweb</name>
