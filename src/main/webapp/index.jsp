@@ -1185,7 +1185,7 @@
         <!-- HERO -->
         <section class="hero" aria-label="Hero banner">
             <div class="container">
-                <div class="badge"><i class="fas fa-sparkles"></i> My New Collection 2026</div>
+                <div class="badge"><i class="fas fa-sparkles"></i> My New Summer Collection 2026</div>
                 <h1>Discover Premium <br>Essentials</h1>
                 <p>Curated fashion, tech & accessories with free shipping on your first order. Limited-time deals await.</p>
                 <div class="actions">
