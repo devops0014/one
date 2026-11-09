@@ -3,7 +3,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -17,8 +17,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- Build old application code using Java 8 compatibility -->
         <maven.compiler.release>8</maven.compiler.release>
 
         <docker.image.prefix>kammana</docker.image.prefix>
@@ -35,29 +33,24 @@
     </dependencies>
 
     <repositories>
-             <repository>
-                    <id>flm-feed</id>
-                    <url>https://pkgs.dev.azure.com/afsanabegummd00/MyFirstProject/_packaging/flm-feed/maven/v1</url>
-                    <releases>
-                      <enabled>true</enabled>
-                      </releases>
-                      <snapshots>
-                               <enabled>true</enabled>
-                      </snapshots>
-              </repository>
+        <repository>
+            <id>flm-feed</id>
+            <url>https://pkgs.dev.azure.com/afsanabegummd00/MyFirstProject/_packaging/flm-feed/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <distributionManagement>
-            <repository>
-  <id>flm-feed</id>
-  <url>https://pkgs.dev.azure.com/afsanabegummd00/MyFirstProject/_packaging/flm-feed/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
+        <repository>
+            <id>flm-feed</id>
+            <url>https://pkgs.dev.azure.com/afsanabegummd00/MyFirstProject/_packaging/flm-feed/maven/v1</url>
+        </repository>
+
         <snapshotRepository>
             <id>nexusRepo</id>
             <url>http://34.208.218.12:8081/repository/sample-snapshots/</url>
@@ -65,9 +58,8 @@
     </distributionManagement>
 
     <build>
-        <finalName>myweb</finalName>
-
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -97,6 +89,7 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
